@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background: url('./images/bg.jpg') no-repeat;
+        }
+         *{
+                margin:0;
+                padding:0;
+            }
+        .container{
+            padding-bottom: 80px;
+           
+        }
+        .date{
+            width: 300px;
+            transition: width 0.5s ease;
+            height: 100%;
+        }
+       .date:hover{
+            width: 350px;
+            cursor: pointer;
+            height: 100%;
+       }
+       .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: relative;
+            animation: move 2s infinite alternate;
+        }
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 300px;
+            }
+        }
+        .flex{
+            display: flex;
+            width: 80%;
+            margin:0 auto;
+            margin-bottom: 80px;
+        }
+        .flex1{
+            flex:1;
+            margin-right: 20px;
+        }
+        .flex2{
+            flex:2;
+            margin-right: 20px;
+        }
+        .flex img{
+            width: 100%;
+            height: 100%;
+        }
+        /*  .typewriter {
+            margin:80px auto;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 48px;
+            white-space: nowrap; 
+           overflow: hidden; 
+            border-right: 3px solid black; 
+            width: 0;
+          /*  animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end 4s; 
+            }*/
+            .loc{
+                margin: 80px auto;
+                font-size: 48px;
+                width:50%;
+                text-align: center;
+                font-weight: bold;
+                display: flex;
+            }
+            @keyframes typing {
+            from { width: 0; } 
+            to { width: 30%; } 
+            }
+            @keyframes blink-caret {
+                from, to { border-color: transparent; }
+                50% { border-color: black; }
+                }
+            .card{
+                background-color: #eee;
+                border-radius: 14px;
+                padding:20px;
+                font-size: 48px;
+                color: #81caed;
+                opacity: 0.9;
+                border:1px solid #ddd;
+                font-weight: bold;
+               transition: transform 0.3s ease, box-shadow 0.3s ease;
+               
+            }
+            .card p{
+                color:#333;
+                font-size: 28px;
+            }
+            .card:hover{
+                cursor: pointer;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                opacity: 0.8;
+                transform: scale(1.1);
+                animation: borderColorChange 1s infinite ease-in-out;
+            }
+            @keyframes borderColorChange {
+                0% {
+                    border-color: rgb(0, 4, 255); /* 边框颜色浅蓝 */
+                }
+                50% {
+                    border-color: #e4f403; /* 边框颜色中度蓝 */
+                }
+                100% {
+                    border-color: #337ab7; /* 边框颜色深蓝 */
+                }
+            }
+
+            #typewriter.finished::after {
+            display: none; 
+            }
+            #typewriter.finished {
+            border-right: none;
+            }
+            .bounce {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #81caed;
+            height: 100%;
+            font: normal bold 6rem "Product Sans", sans-serif;
+            white-space: nowrap;
+            }
+            .letter {
+            animation: bounce 0.65s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+            display: inline-block;
+            transform: translate3d(0, 0, 0);
+            margin-top: 0.5em;
+            text-shadow: rgba(129, 202, 237, 0.6) 0 0 0.05em, 
+                 rgba(0, 0, 0, 0.4) 0 1em 0.5em;
+            font: normal 500 6rem 'Varela Round', sans-serif;
+            }
+            .letter:nth-child(1) {
+            animation-delay: 0s;
+            }
+            .letter:nth-child(2) {
+            animation-delay: 0.0333333333s;
+            }
+            .letter:nth-child(3) {
+            animation-delay: 0.1333333333s;
+            }
+            .letter:nth-child(4) {
+            animation-delay: 0.2333333333s;
+            }
+            .letter:nth-child(5) {
+            animation-delay: 0.3333333333s;
+            }
+            .letter:nth-child(6) {
+            animation-delay: 0.4333333333s;
+            }
+            .letter:nth-child(7) {
+            animation-delay: 0.5333333333s;
+            }
+            .letter:nth-child(8) {
+            animation-delay: 0.6333333333s;
+            }
+            .letter:nth-child(9) {
+            animation-delay: 0.7333333333s;
+            }
+            .letter:nth-child(10) {
+            animation-delay: 0.8333333333s;
+            }
+            .letter:nth-child(11) {
+            animation-delay: 0.9333333333s;
+            }
+
+            @keyframes bounce {
+            0% {
+                transform: translate3d(0, 0, 0);
+                text-shadow: rgba(129, 202, 237, 0.6) 0 0 0.05em, 
+                     rgba(0, 0, 0, 0.4) 0 0.3em 0.5em;
+            }
+            100% {
+                transform: translate3d(0, -0.7em, 0);
+                text-shadow: rgba(129, 202, 237, 0.6) 0 0 0.05em, 
+                     rgba(0, 0, 0, 0.4) 0 0.5em 0.5em;
+            }
+            }
+            .card h3 {
+                color: #81caed; /* 初始颜色 */
+                animation: colorChange 2s ease-in-out infinite alternate;
+            }
+            @keyframes colorChange {
+               0% {
+                    color: #81caed; /* 番茄红 */
+                }
+                25% {
+                    color: rgba(255, 165, 0, 0.8); /* 柔和橙色 */
+                }
+                
+                75% {
+                    color: rgba(144, 238, 144, 0.8); /* 淡绿色 */
+                }
+                100% {
+                    color: rgba(173, 216, 230, 0.8); /* 浅蓝色 */
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div id="" class="loc"> 
+        <div class="bounce">
+            <span class="letter">L</span>
+            <span class="letter">o</span>
+            <span class="letter">c</span>
+            <span class="letter">a</span>
+            <span class="letter">t</span>
+            <span class="letter">i</span>
+            <span class="letter">o</span>
+            <span class="letter">n</span>
+        </div>
+        <div style="margin-left:19px;margin-top:20px;color:#81caed"> did I eat!</div>
+       
+    </div>
+       
+
+        <div class="flex">
+            <div class="flex1">
+                <div class="card">
+                    <h3>at home</h3> 
+                    <p>2840Jackson avenue</p>
+                </div>
+            </div>
+            <div class="flex2">
+                 <div class="card">
+                     <h3>Pranakhon</h3>
+                    <p>88 University Pl, NewYork, NY 10003</p>
+                </div>
+            </div>
+        </div>
+         <div class="flex">
+            <div class="flex2">
+                <div class="card">
+                    <h3>McDonald's </h3>
+                    <p>14 E 47th St, NewYork, <br> NY 10017</p>
+                </div>
+            </div>
+            <div class="flex1">
+                <div class="card">
+                     <h3>sunnyboy</h3>
+                    <p>65 Rivington St, NewYork, NY 10002</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    
+    const typewriterElement = document.getElementById('typewriter');
+   // setTimeout(() => {
+     // typewriterElement.classList.add('finished');
+    //}, 4000); 
+     const card = document.querySelector('.card');
+     card.addEventListener('click', function() {
+    window.location.href = 'entry6.html'; 
+  });
+  </script>
+</body>
+</html>

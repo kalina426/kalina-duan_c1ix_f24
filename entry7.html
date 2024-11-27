@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            height: 100vh;
+            background-color: #FBEEE7;
+          
+        }
+         *{
+                margin:0;
+                padding:0;
+            }
+        .container{
+           width: 900px;
+           margin:0 auto;
+           margin-top:120px;
+          
+        }
+        .flex{
+            display: flex;
+        }
+        .flex1{
+            flex:1
+        }
+        .flex1 img{
+            width: 100%;
+            height: 450px;
+        }
+        .mr-30{
+            margin-right:30px;
+        }
+        .ft_48{
+            font-size: 68px;
+        }
+        p{
+            line-height: 1.8rem;
+            margin-top:90px;
+            font-size: 22px;
+            color:#333;
+        }
+        .neon-text {
+            font-size: 4rem; /* 设置文字大小 */
+            font-weight: bold;
+            color: #0e3742;
+            letter-spacing: 0.5rem; /* 字母间距 */
+            outline: none;
+            position: relative;
+            -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+            animation: flicker 1.5s infinite alternate;
+            line-height: 0.7em;
+            margin-top:30px;
+            }
+            .neon-text::before {
+                color: #0e3742; /* 蓝色光 */
+                filter: blur(3px);
+                }
+
+            .neon-text::after {
+            color: #fff; /* 淡蓝色光 */
+            filter: blur(10px);
+            }
+
+            @keyframes flicker {
+            0%, 100% {
+                opacity: 1;
+                text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+            }
+            50% {
+                opacity: 0.8;
+                text-shadow: 0 0 2px #0ff, 0 0 8px #00f, 0 0 15px #00f;
+            }
+            }
+
+            .sty_font {
+                font-family: "Sour Gummy", sans-serif;
+                font-optical-sizing: auto;
+                font-weight:400;
+                font-style: normal;
+                font-variation-settings:
+                    "wdth" 100;
+                }
+                a{
+                    text-decoration: none;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="entry6.html"><-back</a>
+        <div class="flex">
+            <div class="flex1 mr-30">
+                <img src="images/e8.jpg" alt="">
+            </div>
+            <div class="flex1">
+                <h1 class="ft_48 neon-text" data-text="I MISS YOU" contenteditable="">Sep 28</h1>
+                <p class="sty_font">
+                    It is sunny today, 
+                     New York is a little hot in summer, and the sun is very bright. Today, I have a morning class. After the morning class, I choose to buy something in the union square market next to my school, which is like a large farmer's market. I buy a few bottles every time I pass the market and take them home.
+                </p>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>

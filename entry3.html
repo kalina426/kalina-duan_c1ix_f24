@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        body{
+            background: #f6f6f6;
+        }
+        .container{
+            *{
+                margin:0;
+                padding:0;
+            }
+        }
+        .center{
+            text-align: center;
+            width: 100%;
+            height: 300px;
+        }
+        .date{
+            width: 300px;
+            transition: width 0.5s ease;
+            height: 100%;
+        }
+       .date:hover{
+            width: 350px;
+            cursor: pointer;
+            height: 100%;
+       }
+       .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: relative;
+            animation: move 2s infinite alternate;
+        }
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 300px;
+            }
+        }
+        .flex{
+            display: flex;
+            width: 80%;
+            margin:0 auto;
+            height: 400px;
+            margin-bottom: 80px;
+        }
+        .flex1{
+            flex:1;
+            margin-right: 20px;
+        }
+        .flex2{
+            flex:2;
+            margin-right: 20px;
+        }
+        .flex img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">BACK HOME</a>
+        <h1 class="center">
+            <img class="date" src="images/wed.webp" alt="">
+        </h1>
+        <a href="entry4.html">
+             <div class="flex">
+            <div class="flex1">
+                <img src="images/p1.jpg" alt="">
+            </div>
+            <div class="flex2">
+                <img src="images/p2.jpg" alt="">
+            </div>
+        </div>
+         <div class="flex">
+            <div class="flex2">
+                <img src="images/p3.jpg" alt="">
+            </div>
+            <div class="flex1">
+                <img src="images/p4.jpg" alt="">
+            </div>
+        </div>
+        </a>
+       
+    </div>
+    
+</body>
+</html>

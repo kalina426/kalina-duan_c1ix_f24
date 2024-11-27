@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <title>Document</title>
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background:url(./images/date2.jpg) no-repeat;
+            background-size: 100% 100%;
+            }
+     .calendar-container {
+      width: 300px;
+      text-align: center;
+      margin-top:60px;
+    }
+  
+    .calendar-header {
+      margin: 20px 0;
+      font-size: 1.5em;
+      color:#fff;
+    }
+
+    .calendar-header span {
+      display: block;
+    }
+
+    .calendar-header .day {
+      font-size: 2em;
+      font-style: italic;
+    }
+
+    .calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .calendar-table th {
+      color: orange;
+      font-weight: normal;
+      padding: 10px 0;
+    }
+
+    .calendar-table td {
+      padding: 10px 0;
+    }
+
+    .calendar-table th, .calendar-table td {
+      width: 14.28%; /* 一行7列，平分 */
+      text-align: center;
+    }
+    a{
+        
+        font-weight: bold;
+        text-decoration: none;
+        background-color: orange;
+        opacity: 0.5;
+        border-radius: 50%;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    a:hover{
+        color:red;
+        opacity: 1;
+    }
+    </style>
+</head>
+<body>
+     <div class="calendar-container">
+
+    <div class="calendar-header">
+      <span class="day">10</span>
+      <span>October</span>
+    </div>
+    
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>  
+          <td></td> 
+          <td></td> 
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>
+            <a href="entry3.html">8</a>
+          </td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+          <td>31</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

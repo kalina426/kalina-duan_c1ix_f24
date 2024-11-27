@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background: url('./images/bg.jpg') no-repeat;
+        }
+         *{
+                margin:0;
+                padding:0;
+            }
+        .container{
+           width: 600px;
+           margin:0 auto;
+           margin-top:120px;
+           margin-left:43%;
+        }
+    
+        .card-container {
+            position: relative;
+            width: 240px; 
+            height: 340px; 
+            perspective: 1000px;
+        }
+
+
+        .card {
+            position: absolute;
+            width: 180px; 
+            height: 260px; 
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+        }
+
+
+        .card:nth-child(1) { 
+            transform: rotate(0deg) translate(0, 0); 
+            z-index: 3; 
+            background: #edd2cc;
+        }
+        .card:nth-child(2) { transform: rotate(0deg) translate(0, 0); 
+            z-index: 2; 
+            background: #f6bfca;
+        }
+        .card:nth-child(3) { transform: rotate(0deg) translate(0, 0); 
+            z-index: 1; 
+            background: #ddb1b1;
+        }
+
+
+        .card-container:hover .card:nth-child(1) {
+            transform: rotate(-15deg) translate(-120px, -40px);
+        }
+        .card-container:hover .card:nth-child(2) {
+            transform: rotate(0deg)translate(0, -50px);
+        }
+        .card-container:hover .card:nth-child(3) {
+            transform: rotate(15deg)  translate(120px, -40px);
+        }
+
+
+        .card.active {
+            transform: translateY(-80px) scale(1.1);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+        .card-container.clicked .card:not(.active) {
+            opacity: 0.3;
+        }
+        .card img{
+            width: 50%;
+        }
+        .card a{
+            text-align: center;
+        }
+        .title{
+            width:100%;
+            margin:50px auto;
+            color: #81caed;
+            font-size: 46px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Weather</h1>
+     <div class="card-container">
+    <div class="card">
+        <a href="entry7.html">
+             <img src="images/sum.png" alt="">
+        </a>
+       
+    </div>
+    <div class="card">
+        <a href="entry9.html">
+            <img src="images/cloud.png" alt="">
+        </a>
+        
+    </div>
+    <div class="card">
+        <a href="entry8.html">
+            <img src="images/rain.png" alt="">
+        </a>
+        
+    </div>
+</div>
+
+       
+    </div>
+       
+
+        
+        
+    </div>
+    <script>
+   
+        const cards = document.querySelectorAll('.card');
+        const container = document.querySelector('.card-container');
+
+
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+
+            cards.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+
+
+            container.classList.add('clicked');
+            });
+        });
+
+
+        document.addEventListener('click', function(event) {
+            if (!container.contains(event.target)) {
+            cards.forEach(card => card.classList.remove('active'));
+            container.classList.remove('clicked');
+            }
+        });
+   
+  </script>
+</body>
+</html>
